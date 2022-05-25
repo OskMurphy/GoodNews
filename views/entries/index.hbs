@@ -1,0 +1,13 @@
+<div class="cardList">
+  {{#each articles}}
+
+  <div class="articleCard">
+    <h3>{{this.title}}</h3>
+    <img src="{{this.urlToImage}}" width="100%" />
+    <p>{{this.description}}</p>
+    <a href="{{this.url}}">Перейти к источнику</a>
+  </div>
+  
+  {{/each}}
+</div>
+
