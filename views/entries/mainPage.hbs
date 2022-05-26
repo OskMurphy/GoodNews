@@ -1,15 +1,29 @@
  
   <div class="searchFormDiv">
+
   <form method="POST" action="/word" class="searchForm">
-    <label for="text"></label>
+    <div class="containerOne">
       <input id="text" class="form-control inputText" name="word" placeholder="Введите ключевое слово для поиска" type="text">
       {{#if username}}
        <input type="submit" class="btn btn-primary" value="Найти"></input>
        {{else}}
-       <input type="submit" class="btn btn-primary" value="Найти"></input>
+       <a href="#okno" class="btn btn-primary">Найти</a>
+       <div id="okno">Чтобы воспользоваться поиском, <a href="/auth/signup">зарегистрируйтесь</a> или <a href="/auth/signin">авторизуйтесь</a></div> 
        {{/if}}
+       </div>
+    {{!-- <div class="containerTwo">
+      <input id="text" class="form-control inputText" name="word" placeholder="Введите ключевое слово для поиска" type="text">
+      {{#if username}}
+       <input type="submit" class="btn btn-primary" value="Найти"></input>
+       {{else}}
+       <a href="#okno" class="btn btn-primary">Найти</a>
+       <div id="okno">Чтобы воспользоваться поиском, <a href="/auth/signup">зарегистрируйтесь</a> или <a href="/auth/signin">авторизуйтесь</a></div> 
+       {{/if}}
+       </div> --}}
   </form>
+
 </div>
+
 
 
 

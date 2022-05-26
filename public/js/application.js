@@ -1,9 +1,13 @@
 const searchForm = document.querySelector('.searchForm');
 console.log(searchForm);
 
+const searchFormException = document.querySelector('.searchFormException')
+console.log(searchFormException);
+
 const divContainerNews = document.querySelector('.container-news')
 
-const API_KEY = '969ef0c663d34114b912c8c5216803b3';
+
+const API_KEY = '335b820b2d704ca4969be4cf0508c1e7';
 
 searchForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -18,8 +22,8 @@ searchForm?.addEventListener('submit', async (event) => {
   console.log(11111, response);
   const result = await response.json();
   console.log(result.articles);
-  console.log(result.articles[0].title);
-  if(response.ok) {
+  console.log(22222, result.articles[0]?.title);
+  if(response.ok && result.articles.length !== 0) {
     for (let i = 0; i < result.articles.length; i++) {
       divContainerNews.innerHTML += `
        <div class="articleCard">
@@ -31,15 +35,7 @@ searchForm?.addEventListener('submit', async (event) => {
         `
     }
     event.target.reset()
+  } else {
+    divContainerNews.innerHTML = `<h1>Всё поломалось</h1>`
   }
-  // if(result.ok) {
-  //   divContainerNews.innerHTML = `
-  //   <div class="articleCard">
-  //   <h3>${{result.title}}</h3>
-  //   <img src="${{result.urlToImage}}" width="100%" />
-  //   <p>${{result.description}}</p>
-  //   <a href="{{this.url}}">Перейти к источнику</a>
-  // </div>
-  //   `
-  // }
 });

@@ -4,7 +4,7 @@ const router = require('express').Router();
 
 const { User } = require('../db/models');
 
-router.get('/', (req, res) => {
+router.get('/signup', (req, res) => {
   res.render('entries/signup');
 });
 
@@ -27,11 +27,11 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-router.get('/login', async (req, res) => {
+router.get('/signin', async (req, res) => {
   res.render('entries/login');
 });
 
-router.post('/login', async (req, res) => {
+router.post('/signin', async (req, res) => {
   const { login, password } = req.body;
   try {
     console.log('зашёл в трай');
