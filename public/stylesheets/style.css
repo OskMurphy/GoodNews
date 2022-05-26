@@ -2,23 +2,26 @@
   margin-top: 20px;
 }
 
-.containerOne, .containerTwo {
+.searchForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.container-input {
   display: flex;
-  flex-flow: column;
-  justify-content: end;
-  
-}
-.containerTwo {
-  margin: 40px 0 20px;
-}
-
-.searchFormDiv {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 20px;
+  /* flex-flow: column; */
+	flex-direction:column;
+  /* justify-content: end; */
+	justify-content: center;
+	width: 40%;
+	margin: 30px 0 20px;
 }
 
+#text {
+	margin: 10px 0px;
+}
 /* Стили для новостной ленты */
 .container-news {
   display: flex;
@@ -26,14 +29,14 @@ margin-top: 20px;
   justify-content: space-around;
 
 }
-
-  
+ 
 .cardList {
 min-width: 90%;
 display: flex;
 justify-content: space-even;
 flex-wrap:wrap;
 }
+
 .articleCard {
 display: flex;
 border-radius: 10px;
@@ -45,16 +48,36 @@ margin: 20px;
 padding: 15px;
 background-color: rgb(243, 243, 243);
 }
+
 .articleCard:hover {
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
-
-
+/* всплывающее окно */
 #okno {
   text-align: center;
   padding: 15px;
   color: #0000cc;
   display: none;
 }
+
 #okno:target {
   display: block;
+}
+
+#signupForm, #signinForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.registration-container {
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	width: 40%;
+	margin: 30px 0 20px;
+}
+
+.form-control {
+	margin: 10px 0px;
 }
