@@ -1,1 +1,21 @@
-<h1>Главная</h1>
+  <form method="POST" action="/word" class="searchForm">
+    <label for="text">Ключевое слово:</label>
+      <input id="text" class="form-control" name="word" type="text">
+       <input type="submit" class="btn" value="Найти"></input>
+  </form>
+
+
+
+
+<div class="cardList">
+  {{#each articles}}
+
+  <div class="articleCard">
+    <h3>{{this.title}}</h3>
+    <img src="{{this.urlToImage}}" width="100%" />
+    <p>{{this.description}}</p>
+    <a href="{{this.url}}">Перейти к источнику</a>
+  </div>
+  
+  {{/each}}
+</div>
