@@ -46,7 +46,7 @@ const sessionConfig = {
 app.use(session(sessionConfig));
 
 app.use((req, res, next) => {
-  res.locals.username = req.session?.user?.login;
+  res.locals.username = req.session?.user?.name;
   next();
 });
 
