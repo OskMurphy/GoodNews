@@ -1,6 +1,11 @@
 const searchForm = document.querySelector('.searchForm');
+console.log(searchForm);
+
+const searchFormException = document.querySelector('.searchFormException')
+console.log(searchFormException);
 
 const divContainerNews = document.querySelector('.container-news')
+
 
 const API_KEY = '335b820b2d704ca4969be4cf0508c1e7';
 
@@ -8,22 +13,12 @@ searchForm?.addEventListener('submit', async (event) => {
 	event.preventDefault();
 	divContainerNews.innerHTML = ""
 	const word = event.target.word.value;
-	const wordException = event.target.wordException.value;
-	let response;
-
-	if (wordException === "") {
-		response = await fetch(`https://newsapi.org/v2/everything?q=${word}&from=2022-05-23&sortBy=popularity&language=ru&pageSize=10`, {
-			headers: {
-				'X-Api-Key': API_KEY,
-			},
-		});
-	} else {
-		response = await fetch(`https://newsapi.org/v2/everything?q=${word} NOT ${wordException}&from=2022-05-23&sortBy=popularity&language=ru&pageSize=10`, {
-			headers: {
-				'X-Api-Key': API_KEY,
-			},
-		});
-	}
+	console.log(word);
+	const response = await fetch(`https://newsapi.org/v2/everything?q=${word}&from=2022-05-23&sortBy=popularity&language=ru&pageSize=10`, {
+		headers: {
+			'X-Api-Key': API_KEY,
+		},
+	});
 	console.log(11111, response);
 	const result = await response.json();
 	console.log(result.articles);
