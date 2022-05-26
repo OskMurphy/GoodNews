@@ -34,9 +34,9 @@ app.use(express.json());
 hbs.registerPartials(`${__dirname}/views/partials`);
 
 const sessionConfig = {
-  name: 'cookieBroccoli',
+  name: 'cookieGoodNews',
   store: new FileStore(),
-  secret: 'cookieSecretDataBaseBrocol',
+  secret: 'cookieSecretDataBaseNews',
   resave: false,
   saveUninitialized: false,
   cookie: { secure: false, maxAge: 1000 * 60 * 60 * 24 * 14 },
