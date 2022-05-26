@@ -1,0 +1,44 @@
+.btn {
+  margin-top: 20px;
+}
+
+.searchForm {
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  width: 50%;
+}
+.searchFormDiv {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+/* Стили для новостной ленты */
+.container-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+  
+.cardList {
+min-width: 90%;
+display: flex;
+justify-content: space-even;
+flex-wrap:wrap;
+}
+.articleCard {
+display: flex;
+border-radius: 10px;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+width: 25%;
+margin: 20px;
+padding: 15px;
+background-color: rgb(243, 243, 243);
+}
+.articleCard:hover {
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}

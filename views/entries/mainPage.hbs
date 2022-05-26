@@ -1,8 +1,15 @@
+ 
+  <div class="searchFormDiv">
   <form method="POST" action="/word" class="searchForm">
-    <label for="text">Ключевое слово:</label>
-      <input id="text" class="form-control" name="word" type="text">
-       <input type="submit" class="btn" value="Найти"></input>
+    <label for="text"></label>
+      <input id="text" class="form-control inputText" name="word" placeholder="Введите ключевое слово для поиска" type="text">
+      {{#if username}}
+       <input type="submit" class="btn btn-primary" value="Найти"></input>
+       {{else}}
+       <input type="submit" class="btn btn-primary" value="Найти"></input>
+       {{/if}}
   </form>
+</div>
 
 
 
